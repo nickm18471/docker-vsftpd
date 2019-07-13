@@ -13,7 +13,7 @@
 # governing permissions and limitations under the License.
 #
 # Based on a fork of fauria/docker-vsftpd by Fer Uría (https://github.com/fauria/
-# docker-vsftpd) which was released under the Apache License, Version 2.0.
+# docker-vsftpd) released under the Apache License, Version 2.0.
 #
 #######################################################################################
 
