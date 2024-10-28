@@ -29,7 +29,11 @@ ENV REVERSE_LOOKUP_ENABLE YES
 ENV PASV_PROMISCUOUS NO
 ENV PORT_PROMISCUOUS NO
 
-RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/private/vsftpd.pem
+# Create directory for SSL certificate and generate it without prompts
+RUN mkdir -p /etc/ssl/private && \
+    openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+    -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/private/vsftpd.pem \
+    -subj "/C=US/ST=State/L=City/O=Organization/OU=Department/CN=example.com"
 
 COPY vsftpd.conf /etc/vsftpd/
 COPY vsftpd_virtual /etc/pam.d/

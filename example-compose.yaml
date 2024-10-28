@@ -7,6 +7,10 @@ services:
       args:
         USER_ID: 1000
         GROUP_ID: 1000
+    environment:
+      FTP_USER: xxx
+      FTP_PASS: xxx
+      PASV_ADDRESS: xx.xx.xx.xx
     restart: always
     ports:
       - 0.0.0.0:20:20
