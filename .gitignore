@@ -1,1 +1,8 @@
 .idea
+compose-*.yaml
+compose.yaml
+compose-*.yml
+compose.yml
+home
+log
+logs
